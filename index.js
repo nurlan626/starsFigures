@@ -12,7 +12,7 @@ function emptySquare(n) {
     for (let i = 1; i <= n; i++) {
         console.log('*'+ " ".repeat(n-2) + '*');
     }    
-    a = console.log('*'.repeat(n));
+    console.log('*'.repeat(n));
     return n;
 }
 function triangle(n) {
@@ -21,7 +21,7 @@ function triangle(n) {
         console.log('*'.repeat(i));
     }
 }
-function EmptyTriangle(n) {
+function emptyTriangle(n) {
     console.log('Empty Triangle');
     console.log('*');
     for (let i = 2; i <= n-1; i++) {
@@ -61,6 +61,6 @@ let n = 5;
 square(n);
 emptySquare(n);
 triangle(n);
-EmptyTriangle(n);
+emptyTriangle(n);
 sandClock(n);
-emptySandClock(n);
+//emptySandClock(n);
