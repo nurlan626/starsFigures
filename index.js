@@ -1,19 +1,16 @@
-
 function square(n) {
-     console.log('Square');
-for (let i = 1; i <= n; i++) {
+    console.log('Square');
+    for (let i = 1; i <= n; i++) {
     console.log('*'.repeat(n));
-}
-    return n;
+    }
 }
 function emptySquare(n) {
     console.log('Empty Square');
     console.log('*'.repeat(n));
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n-2; i++) {
         console.log('*'+ " ".repeat(n-2) + '*');
     }    
     console.log('*'.repeat(n));
-    return n;
 }
 function triangle(n) {
     console.log('Triangle');
@@ -29,38 +26,38 @@ function emptyTriangle(n) {
     }
     console.log('*'.repeat(n));
 }
-function sandClock(n) {  
-    console.log('sandClock');
-    for (var i = n; i >= 1; i--) { 
-      var s = ""; 
-      for (var j = 2 * n - 1; j >= 1; j--) {  
-         (j >= n + 1 - i && j <= n - 1 + i) ? s += "*" : s += " ";  
-       } 
-      console.log(s); 
-     } 
-     for (var i = 1; i <= n; i++) { 
-        var s = ""; 
-        for (var j = 1; j <= (2 * n - 1); j++) {  
-           (j >= n + 1 - i && j <= n - 1 + i) ? s += "*" : s += " ";  
-         } 
-        console.log(s); 
-       } 
- } 
-// function emptySandClock(n) {
-//     console.log('Empty Sand Clock');
-//     for (var i = 1; i <= n; i++) { 
-//       var s = ""; 
-//       for (var j = 1; j <= (2*n -1); j++) {  
-//          (j >= n + 1 - i && j <= n - 1 + i) ? s += "*" : s += " ";  
-//        } 
-//       console.log(s); 
-//      } 
-//  } 
-
+ function sandClock(n) {
+     console.log('sand clock');
+    for(let i = 0; i < n; i++){
+        let stars = '*'.repeat(2*n - 2 * i);
+        let space = ' '.repeat(i); 
+        console.log(space + stars + space);
+    }
+    for(let i = 1; i <= n; i++){
+        let space = ' '.repeat( n - i );
+        let stars = '*'.repeat( i * 2)
+        console.log(space + stars + space);
+    }
+}
+function emptySandClock(n) {
+    console.log('empty sand clock');
+    console.log('*'.repeat(2*n));
+   for(let i = 1; i < n - 1; i++){
+       let stars = '*' +  ' '.repeat(2*n - 2*i-2) + '*';
+       let space = ' '.repeat(i); 
+       console.log(space + stars + space);
+   }
+   for(let i = 1; i < n; i++){
+       let space = ' '.repeat( n - i );
+       let stars = '*' + ' '.repeat( i * 2-2) +  '*';
+       console.log(space + stars + space);
+   }
+   console.log('*'.repeat(2*n));
+}
 let n = 5;
 square(n);
 emptySquare(n);
 triangle(n);
 emptyTriangle(n);
 sandClock(n);
-//emptySandClock(n);
+emptySandClock(n);
