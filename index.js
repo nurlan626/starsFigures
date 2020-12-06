@@ -54,10 +54,3 @@ function emptySandClock(n) {
    }
    console.log('*'.repeat(2*n));
 }
-let n = 5;
-square(n);
-emptySquare(n);
-triangle(n);
-emptyTriangle(n);
-sandClock(n);
-emptySandClock(n);
